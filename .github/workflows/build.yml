@@ -22,5 +22,5 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: ps
-          path: build/libs/ps.jar
+          path: build/libs/*.jar
       
