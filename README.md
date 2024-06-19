@@ -13,7 +13,7 @@ It allows you to merge plots, and build together with your friends.
 You can also change a lot of plot specific settings in the form of
 flags. Such as: weather, time, game modes, pvp status.
 
-Whilst we provide a whole load of unique features, the biggest focus
+Whilst we provide a whole load of unisque features, the biggest focus
 is to provide a lag-free and smooth experience.
 
 
