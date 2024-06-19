@@ -10,7 +10,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Validate Gradle Wrapper
-        uses: gradle/actions/wrapper-validation@v3
+        uses: gradle/wrapper-validation-action@v2
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -18,9 +18,12 @@ jobs:
           java-version: 17
       - name: Clean Build
         run: ./gradlew clean build
-      - name: build plugins
-        uses: actions/upload-artifact@main
+      - name: Upload jars
+        uses: actions/upload-artifact@v4.3.3
         with:
-          name: ps
-          path: build/libs/*.jar
+          path: ./Bukkit/build/libs/*.jar
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v4.1.7
+        with:
+          path: ./Bukkit/build/libs/*.jar
       
